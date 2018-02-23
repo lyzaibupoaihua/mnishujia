@@ -152,7 +152,7 @@
 		flex-direction: column;
 		width:45%; 
 		height:580px; 
-		background-color:#f00; 
+		background-color:#9E9E9E12; 
 		color:#000;
 		position:relative;
 		/*left:5%;*/
@@ -167,10 +167,14 @@
 		text-overflow:clip;
 		word-wrap:break-word;
 		overflow:hidden; 
-	}
-	/* p{
-	 	/*text-align: start*/;
-	 	/*flex-wrap:wrap;*/
-	 	/*display:inline-block;*/
+		border-radius:5px;
 
-	 /*}*/
+	}
+	p{
+	 	text-align: start;
+	 	flex-wrap:wrap;
+	 	display:inline-block;
+	 	width: 100%;
+	 	margin:0;
+
+	 }
