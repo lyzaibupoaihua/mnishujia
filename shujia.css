@@ -2,6 +2,7 @@
 		margin:0;
 		text-align:center;
 	}
+
 	.vertical-line{
 		width: 1px;
 		margin: 0px;
@@ -110,6 +111,7 @@
 		display: inline-block;
 		width:90%;
 		margin:0 auto;
+		min-width: 700px;
 	}
 	.chuixian-two{
 		box-sizing:border-box;
@@ -146,7 +148,7 @@
 		/*position:relative;
 		left: 50%;*/
 	}
-	#txtares-right,#txtares-left{
+	divbox {
 		display:inline-flex;
 		flex-wrap:wrap;
 		flex-direction: column;
@@ -170,12 +172,12 @@
 		border-radius:5px;
 
 	}
-	p{
+	p+p{
 	 	text-align: start;
 	 	flex-wrap:wrap;
 	 	display:inline-block;
 	 	width: 100%;
-	 	margin:0;
+	 	/*margin:0;*/
 
 	 }
 	  /*动画自左向右,暂时将此作为翻页动画*/
@@ -183,6 +185,7 @@
 	 		background: red;
 	 		animation:moveleft 1s infinite;
 	 		animation-direction:alternate;
+	 		animation-iteration-count:initial;
 	 }
 	 /*var sa=*/
 		@keyframes moveleft{
@@ -193,11 +196,18 @@
 		 /*动画自右向左*/
 		.moveright{
 	 		/*background: red;*/
+	 		/*动画时间*/
 	 		animation:moveright 1s infinite;
+	 		transition:1s ease;
 	 		animation-direction:alternate;
+	 		/*动画只跑一次*/
+	 		animation-iteration-count:initial;
 	 	}
 		@keyframes moveright{
 			0% {transform:  translate(0,0)}
 			50% {transform: translate(20px, 46px) rotate(-30deg)}
 			100%{transform: translate(-103%, 0px) rotate(0deg)}
 		}
+	.hide{
+		display: none;
+	}

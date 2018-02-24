@@ -28,16 +28,18 @@
 		var sreenwidth = document.body.clientWidth
 		 if(clickedwidth * 2 >= sreenwidth ){
 		 	log("你点击的区域是右半边")
-		 	ids='txtares-right'
+		 	var ids='txtares-right'
+		 	//增加class
 		 	addclassnamebyid(ids,'moveright')
+		 	//删除class
+		 	deteleclassnamebyid(ids,'moveright')
 
-		 }else{
-		 	log("你点击的区域是左半边")
-			 	ids='txtares-left'
+		 	}else{
+		 		log("你点击的区域是左半边")
+			 	var ids='txtares-left'
 		 		addclassnamebyid(ids,'moveleft')
-
-
-		 }
+		 		deteleclassnamebyid(ids,'moveleft')
+		 	}
 		 	
 		// log("点击的宽度",clickedwidth)
 		// log("当前网页宽度",document.body.clientWidth)
@@ -52,17 +54,27 @@
 		// // alert("You clicked on a " + tname + " element.")
 		// log("你点击的区域是",tname)
 	}
-	
+		//通过标签的id查询，来增加class
 		addclassnamebyid = function(id,arguments){
 			// ids='txtares-left'
-			var ids=id
-			log("getElementById",document.getElementById('ids'))
+			var ids = id
+			// log("getElementById",document.getElementById('ids'))
 			document.getElementById(ids).className+=' '+arguments
+		}
+		deteleclassnamebyid =function(id,arguments){
+			var ids = id
+			var names=document.getElementById(ids).classList 
+			// log("classname liebiao",names)
+			names.remove(arguments)
 		}
 		// addclassname = function(arguments){
 		// 	ids='txtares-left'
 		// 	log("getElementById",document.getElementById('ids'))
 		// 	document.getElementById(ids).+=arguments
 		// }
+		//利用getElementByTagName查询标签divbox的数量，并用getAttribute得到其数值
+		//作为下标访问或操作
+		document.getElementsByTagName("divbox").length
+		document.getElementsByTagName("divbox")[1].getAttribute("data-box")
 			
 		
