@@ -28,9 +28,15 @@
 		var sreenwidth = document.body.clientWidth
 		 if(clickedwidth * 2 >= sreenwidth ){
 		 	log("你点击的区域是右半边")
+		 	ids='txtares-right'
+		 	addclassnamebyid(ids,'moveright')
 
 		 }else{
 		 	log("你点击的区域是左半边")
+			 	ids='txtares-left'
+		 		addclassnamebyid(ids,'moveleft')
+
+
 		 }
 		 	
 		// log("点击的宽度",clickedwidth)
@@ -46,3 +52,17 @@
 		// // alert("You clicked on a " + tname + " element.")
 		// log("你点击的区域是",tname)
 	}
+	
+		addclassnamebyid = function(id,arguments){
+			// ids='txtares-left'
+			var ids=id
+			log("getElementById",document.getElementById('ids'))
+			document.getElementById(ids).className+=' '+arguments
+		}
+		// addclassname = function(arguments){
+		// 	ids='txtares-left'
+		// 	log("getElementById",document.getElementById('ids'))
+		// 	document.getElementById(ids).+=arguments
+		// }
+			
+		

@@ -146,7 +146,7 @@
 		/*position:relative;
 		left: 50%;*/
 	}
-	.txtares{
+	#txtares-right,#txtares-left{
 		display:inline-flex;
 		flex-wrap:wrap;
 		flex-direction: column;
@@ -178,3 +178,26 @@
 	 	margin:0;
 
 	 }
+	  /*动画自左向右,暂时将此作为翻页动画*/
+	 .moveleft{
+	 		background: red;
+	 		animation:moveleft 1s infinite;
+	 		animation-direction:alternate;
+	 }
+	 /*var sa=*/
+		@keyframes moveleft{
+			0% {transform:  translate(0,0)}
+			50% {transform: translate(-20px, -46px) rotate(30deg)}
+			100%{transform: translate(103%, 0px) rotate(0deg)}
+		}
+		 /*动画自右向左*/
+		.moveright{
+	 		/*background: red;*/
+	 		animation:moveright 1s infinite;
+	 		animation-direction:alternate;
+	 	}
+		@keyframes moveright{
+			0% {transform:  translate(0,0)}
+			50% {transform: translate(20px, 46px) rotate(-30deg)}
+			100%{transform: translate(-103%, 0px) rotate(0deg)}
+		}
