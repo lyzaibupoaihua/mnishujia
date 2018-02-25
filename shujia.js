@@ -16,6 +16,9 @@
 	
 		
 	}
+	// var dgetn = function(arguments){
+	// 	return document.getElementsByTagName(arguments)
+	// }
 	//判断鼠标点击的区域 已控制左右翻页
 	function whichElement(e){
 		var e = window.event
@@ -32,13 +35,20 @@
 		 	//增加class
 		 	addclassnamebyid(ids,'moveright')
 		 	//删除class
-		 	deteleclassnamebyid(ids,'moveright')
-
+		 	// deteleclassnamebyid(ids,'moveright')
+		 	log("123")
+		 	setTimeout("deteleclassnamebyid('txtares-right','moveright')",1000)
+		 	// setTimeout("deteleclassnamebyid('txtares-right',moveright')",1000)
+			log("321")
+		 		addclassnamebyid(ids,'hide')
 		 	}else{
 		 		log("你点击的区域是左半边")
 			 	var ids='txtares-left'
 		 		addclassnamebyid(ids,'moveleft')
-		 		deteleclassnamebyid(ids,'moveleft')
+		 		setTimeout("deteleclassnamebyid('txtares-left','moveleft')",1000)
+		 		
+		 		addclassnamebyid(ids,'hide')
+
 		 	}
 		 	
 		// log("点击的宽度",clickedwidth)
@@ -62,6 +72,19 @@
 			document.getElementById(ids).className+=' '+arguments
 		}
 		deteleclassnamebyid =function(id,arguments){
+			var ids = id
+			var names=document.getElementById(ids).classList 
+			// log("classname liebiao",names)
+			names.remove(arguments)
+		}
+		addclassnamebytag =function(tagname,number,arguments){
+		
+			var tagnames = tagname
+			var names=document.getElementsByTagName(tagnames)[number].classList
+			log("classname liebiao",names)
+			names.add(arguments)
+		}
+		deteleclassnamebytag =function(id,arguments){
 			var ids = id
 			var names=document.getElementById(ids).classList 
 			// log("classname liebiao",names)
