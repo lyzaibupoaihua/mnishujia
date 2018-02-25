@@ -16,6 +16,7 @@
 	
 		
 	}
+	window.i =0
 	// var dgetn = function(arguments){
 	// 	return document.getElementsByTagName(arguments)
 	// }
@@ -31,25 +32,34 @@
 		var sreenwidth = document.body.clientWidth
 		 if(clickedwidth * 2 >= sreenwidth ){
 		 	log("你点击的区域是右半边")
-		 	var ids='txtares-right'
+		 	var cname='txtares-right'
 		 	//增加class
-		 	addclassnamebyid(ids,'moveright')
+		 	addclassbyclassname(cname,'moveright')
 		 	//删除class
 		 	// deteleclassnamebyid(ids,'moveright')
 		 	log("123")
-		 	setTimeout("deteleclassnamebyid('txtares-right','moveright')",1000)
+		 	setTimeout("deteleclassbyclassname('txtares-right','moveright')",1000)
 		 	// setTimeout("deteleclassnamebyid('txtares-right',moveright')",1000)
 			log("321")
-		 		addclassnamebyid(ids,'hide')
-		 	}else{
-		 		log("你点击的区域是左半边")
-			 	var ids='txtares-left'
-		 		addclassnamebyid(ids,'moveleft')
-		 		setTimeout("deteleclassnamebyid('txtares-left','moveleft')",1000)
+		 		// addclassnamebyid(ids,'hide')
+		 		window.i++
+		 		log("i=",i)
+		 	}else if(window.i==0){
 		 		
-		 		addclassnamebyid(ids,'hide')
+		 			log("没有了")
+		 		}else{
+		 			log("你点击的区域是左半边")
+		 			var cname='txtares-left'
+		 			addclassbyclassname(cname,'moveleft')
+		 			setTimeout("deteleclassbyclassname('txtares-left','moveleft')",1000)
+		 			window.i--
+		 			log("i=",i)
+		 		}
 
-		 	}
+		 		
+		 		// addclassnamebyid(ids,'hide')
+
+		 	
 		 	
 		// log("点击的宽度",clickedwidth)
 		// log("当前网页宽度",document.body.clientWidth)
@@ -65,20 +75,33 @@
 		// log("你点击的区域是",tname)
 	}
 		//通过标签的id查询，来增加class
-		addclassnamebyid = function(id,arguments){
+		// addclassnamebyid = function(id,arguments){
+		// 	// ids='txtares-left'
+		// 	var ids = id
+		// 	// log("getElementById",document.getElementById('ids'))
+		// 	document.getElementById(ids).className+=' '+arguments
+		// }
+		addclassbyclassname = function(cname,arguments){
 			// ids='txtares-left'
-			var ids = id
+			var cnames = cname
 			// log("getElementById",document.getElementById('ids'))
-			document.getElementById(ids).className+=' '+arguments
+			document.getElementsByClassName(cnames)[0].classList.add(arguments)
 		}
-		deteleclassnamebyid =function(id,arguments){
-			var ids = id
-			var names=document.getElementById(ids).classList 
-			// log("classname liebiao",names)
-			names.remove(arguments)
+		deteleclassbyclassname = function(cname,arguments){
+			// ids='txtares-left'
+			var cnames = cname
+			// log("getElementById",document.getElementById('ids'))
+			document.getElementsByClassName(cnames)[0].classList.remove(arguments)
 		}
+		// 通过id删除class
+		// deteleclassnamebyid =function(id,arguments){
+		// 	var ids = id
+		// 	var names=document.getElementById(ids).classList 
+		// 	// log("classname liebiao",names)
+		// 	names.remove(arguments)
+		// }
 		addclassnamebytag =function(tagname,number,arguments){
-		
+			var number
 			var tagnames = tagname
 			var names=document.getElementsByTagName(tagnames)[number].classList
 			log("classname liebiao",names)
@@ -86,7 +109,7 @@
 		}
 		deteleclassnamebytag =function(id,arguments){
 			var ids = id
-			var names=document.getElementById(ids).classList 
+			var names=document.getElementsById(ids).classList 
 			// log("classname liebiao",names)
 			names.remove(arguments)
 		}
@@ -97,7 +120,7 @@
 		// }
 		//利用getElementByTagName查询标签divbox的数量，并用getAttribute得到其数值
 		//作为下标访问或操作
-		document.getElementsByTagName("divbox").length
-		document.getElementsByTagName("divbox")[1].getAttribute("data-box")
-			
+		// document.getElementsByTagName("divbox").length
+		// document.getElementsByTagName("divbox")[1].getAttribute("data-box")
+		// document.getElementsByClassName('hide')[0].classList.remove('hide')	
 		
