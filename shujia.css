@@ -1,8 +1,48 @@
 	body{
 		margin:0;
 		text-align:center;
+		background: #7e9c5a2e;
 	}
-
+	.headerbox{
+		background-image: url(./picture/hang.jpg); 
+		z-index: -199;
+	}
+	.bottombox{
+		height: 40px;
+		width: 100%;
+		background-image: url(./picture/hang.jpg); 
+		z-index: -199;
+	}
+	header{
+		font-family:'cyjianxk1075d9d5981bfce';
+		height:50px;
+		margin:0;
+		border:0;
+		font-size:40px;
+		width:80%;
+		display: inline-block;
+	}
+	.xpbox{
+		z-index: 100;
+		width: 10%;
+    	height: 50px;
+    	float: right;
+    	background: #607d8b8c;
+    	display: inline-block;
+    	transform: rotate(210deg);
+    	border-radius:  0 38.5% 38.5% 0 
+	}
+	.xiangpi{
+		width: 38.5%;
+		height: 50px;
+		float: right;
+		background: block;
+		display: inline-block;
+		border-radius:  0 50% 50% 0 ; 
+		z-index: 100;
+		margin:blue;
+		/*transform: rotate(7deg)*/
+	}
 	.vertical-line{
 		width: 1px;
 		margin: 0px;
@@ -18,7 +58,7 @@
 		/*margin: 3px;*/
 		/*size: 1000px;*/
 		height:90%;
-		/*border:0px;*/
+		border:0px;
 		color:#0f0;
 		background:#0f0;
 		position:relative;
@@ -40,13 +80,15 @@
 		width:47%;
 		height:24px;
 		margin:0 auto;
+		/*color:red;*/
+		background: #8bc34a57;
+		border-radius: 0% 100%;
 	/*	border:5px 5px;
 		background: #000;
 		border-top-left-radius:2.5px;
 	　　border-top-right-radius:2.5px;
 	　　border-bottom-right-radius:0px;
 	　　border-bottom-left-radius:0px;
-		/*color:red;*/
 	/*	box-shadow: 0 0 8px black;
 		border-radius: 200px/12px;*/
 		overflow: hidden;
@@ -112,6 +154,25 @@
 		width:90%;
 		margin:0 auto;
 		min-width: 700px;
+		background: #5386184f;
+		border-radius: 4% 4% 4% 4%;
+	}
+	.left{
+		width: 5%;
+		float:left;
+		display: inline-block;
+		/*background: red;*/
+		height: 636px;
+		background-image: url(./picture/lie.jpg); 
+	}
+	.right{
+		width: 5%;
+		float:right;
+		display: inline-block;
+		/*background: red;*/
+		height: 636px;
+		z-index: 200;
+		background-image: url(./picture/lie.jpg);
 	}
 	.chuixian-two{
 		box-sizing:border-box;
@@ -155,12 +216,13 @@
 		width:45%; 
 		height:580px; 
 		background-color:#9E9E9E12; 
-		color:#000;
+		/*color:#000;*/
 		position:relative;
 		/*left:5%;*/
 		/*margin-right: 10px;*/
 		margin-left: 10px;
 		border-right-style: inset;
+		border-right-color: #35333345;
 		/*word-wrap:normal;*/
 		/*text-rendering: auto;*/
 		vertical-align:top;
@@ -180,14 +242,13 @@
 	 	/*margin:0;*/
 
 	 }
-	  /*动画自左向右,暂时将此作为翻页动画*/
-	 .moveleft{
-	 		background: red;
+	  /*动画自左向右,暂时将此作为简单的翻页动画*/
+	.moveleft{
+	 		/*background: red;*/
 	 		animation:moveleft 1s infinite;
 	 		animation-direction:alternate;
 	 		animation-iteration-count:initial;
 	 }
-	 /*var sa=*/
 		@keyframes moveleft{
 			0% {transform:  translate(0,0)}
 			50% {transform: translate(-20px, -46px) rotate(30deg)}
@@ -210,4 +271,27 @@
 		}
 	.hide{
 		display: none;
-	}
+		}
+	/*动画透明度渐变*/
+	.showing{
+		animation:showing 1s infinite;
+		/*animation-iteration-count:initial;*/
+
+		}
+	 @keyframes showing{
+	 	0%{opacity:0;}
+	 	30%{opacity:0.3;}
+	 	50%{opacity:0.7;}
+	 	100%{opacity:1;}
+
+	 }
+	.hiding{
+		animation:hiding 1s infinite;
+		/*animation-iteration-count:initial;*/
+		}
+	 @keyframes hiding{
+	 	0%{opacity:1;}
+	 	30%{opacity:0.4;}
+	 	60%{opacity:0.2;}
+	 	100%{opacity:0;}
+	 }

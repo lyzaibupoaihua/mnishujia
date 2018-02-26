@@ -3,72 +3,82 @@
 <head>
 	<meta charset ="utf-8">
 	<title>我的书架</title>
-	
+	<link href='http://cdn.webfont.youziku.com/webfonts/nomal/114638/45904/5a93a1eef629d80784d8ee05.css' rel='stylesheet' type='text/css' />
 	<link href="shujia.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.js">
+ 	</script>
 </head>
 <body onmousedown="whichElement(event)">
-	<input type="color">
-	<div>
-		<header> ${zhanghao}的书架:</header>
+	<!-- <input type="color"> -->
+	<div class=headerbox>
+		<header>人书——明:</header>
+		<div class=xpbox>
+			<div class=xiangpi style="background:#7955486c;"></div>
+		</div>
 	</div>
-	<div class=yemian>
-			<!-- 		<div id="yidu">
-				<hr class=vertical-line>
-			</div> -->
-		<div class="jvzhong">
-			<div class=huxian></div>
-
-			<div class=huxian></div>
+	<div class=main>
+		<div class =left></div>
+		<div class=yemian>
+			<div class="jvzhong">
+				<div class=huxian></div>
+				<div class=huxian></div>
+			</div>
+			<div class=allheight style="background: #8bc34a42;
+				border-radius: 100% 6%;">
+				<div class=chuixian></div>
+			</div>
+			<div class=allheight-two style="background: #4caf504f;
+				border-radius: 0% 100%;">
+				<div class=chuixian-two></div>	
+			</div>				
+			<divbox  data-boxleft=1 id="" class="txtares-left show">
+				<p>
+					帝 华昊五百一十三年 春  三月初九 晚
+				</p>
+				<p>
+					来日可期，惜之方长，以此记。
+				</p>
+				<p>
+					待重逢，便··· ···
+				</p>
+			</divbox >	
+			<divbox data-boxright=1 	class="txtares-right show">
+				<p>divboxright1</p>
+			</divbox>
+			<divbox data-boxleft=2 		class="hide txtares-left">
+				<p>divboxleft2</p>
+			</divbox>
+			<divbox data-boxright=2  	class="hide txtares-right">
+				<p>divboxright2</p>
+			</divbox>
+			<divbox data-boxleft=3  	class="hide txtares-left">
+				<p>divboxleft3</p>	
+			</divbox>
+			<divbox data-boxright=3  	class="hide txtares-right">
+				<p>divboxright3</p>
+			</divbox>
+				
+			<divbox data-boxleft=4 		class="hide txtares-left">
+				<p>divboxleft4</p>
+			</divbox>
+			<divbox data-boxright=4  	class="hide txtares-right">
+				<p>divboxright4</p>
+			</divbox>
+			<divbox data-boxleft=5  	class="hide txtares-left">
+				<p>divboxleft5</p>	
+			</divbox>
+			<divbox data-boxright=5  	class="hide txtares-right">
+				<p>divboxright5</p>
+			</divbox>
+			
+			<div class="jvzhong bottom">
+				<div class=huxian></div>
+				<div class=huxian></div>
+			</div>
 		</div>
-		<div class=allheight>
-			<div class=chuixian></div>
-		</div>
-		<div class=allheight-two>
-			<div class=chuixian-two></div>	
-		</div>				
-		<divbox  data-boxleft=1 id="" class="txtares-left show">
-			<p>
-				帝 华昊五百一十三年 春 <br>           三月初九 晚
-			</p>
-			<p>
-				来日可期，惜之方长，遂以此记。
-			</p>
-			<p>
-				初日，温渐了，念愈浓。闻诺阳，望月思述，每书“思、念”二字，待到重逢，便··· ···
-			</p>
-		</divbox >	
-		<!-- <textarea>
-			<p>sssssssssssssss</p>
-		</textarea> -->
-		<divbox data-boxright=2 class="txtares-right show">
-			
-		</divbox>
-
-		<divbox data-boxleft=3 class="hide txtares-left">
-			
-		</divbox>
-
-		<divbox data-box=4  class="hide txtares-right">
-			
-		</divbox>
-		<divbox data-box=5  class="hide txtares-left">
-			
-		</divbox>
-
-	
-		<divbox data-box=6  class="hide txtares-right">
-			
-		</divbox>
-			
-
-		
-		<div class="jvzhong bottom">
-			<div class=huxian></div>
-			<div class=huxian></div>
-		</div>
-		
+		<div class=right></div>
 	</div>
-	
+	<div class=bottombox></div>
 	<script src=shujia.js></script>
 </body>
 
