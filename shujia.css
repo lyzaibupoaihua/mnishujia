@@ -171,9 +171,15 @@
 		display: inline-block;
 		/*background: red;*/
 		height: 636px;
-		z-index: 200;
+		/*z-index: 200;*/
 		background-image: url(./picture/lie.jpg);
 	}
+	.onright{
+		/*z-index: 200;*/
+		width:44px;
+		height:66.6%;
+	}
+
 	.chuixian-two{
 		box-sizing:border-box;
 		display:inline-block;
